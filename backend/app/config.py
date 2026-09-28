@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
-    database_url: str = "mysql+pymysql://career_app:lintaisthebest@localhost:3306/career_navigator"
+    database_url: str = "mysql+pymysql://career_app:*********@localhost:3306/career_navigator"
     jwt_secret: str = "dev-only-change-me"
     access_token_minutes: int = 15
     refresh_token_days: int = 14
