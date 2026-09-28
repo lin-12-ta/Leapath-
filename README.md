@@ -24,7 +24,25 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173`. The supplied `.env.example` selects local SQLite. To use MySQL, set `DATABASE_URL` to a valid `mysql+pymysql://...` URL and make sure the MySQL service and database are running before starting the API. `backend/schema.sql` documents the MySQL 8 schema. The backend's Settings fallback (when no `.env` or `DATABASE_URL` is present) is a local MySQL URL.
+### Local URLs
+
+- Frontend: <http://localhost:5173>
+- Backend API: <http://localhost:8000>
+- API health check: <http://localhost:8000/health>
+- Interactive API docs: <http://localhost:8000/docs>
+
+The frontend uses `http://localhost:8000` as its API base URL by default. The supplied `.env.example` selects a local SQLite database, so MySQL is not required for the quickstart. To use MySQL instead, set `DATABASE_URL` to a valid `mysql+pymysql://...` URL and make sure the MySQL service and database are running before starting the API. `backend/schema.sql` documents the MySQL 8 schema. The backend's Settings fallback (when no `.env` or `DATABASE_URL` is present) is a local MySQL URL.
+
+### Demo account
+
+The application does not include pre-seeded users. On a fresh checkout, the local database starts empty. In the sign-in screen, choose **Create account** and register the demo credentials below; signup creates the account in that local database and signs you in. On later visits, use **Log in** with the same credentials.
+
+| Field | Demo value |
+| --- | --- |
+| Email | `linta@gmail.com` |
+| Password | `1111111111` |
+
+These are public, local-demo credentials only. Do not reuse them for any personal or production account. If the email belongs to a real mailbox, replace it with an address reserved for testing before sharing this README publicly.
 
 `OPENROUTER_MODEL` defaults to `openrouter/free`. `OPENROUTER_EMBEDDING_MODEL` defaults to `nvidia/nemotron-3-embed-1b:free`; both can be changed to compatible model IDs. Free model availability and rate limits can vary. The free NVIDIA embedding endpoint has its own data-use terms; do not send confidential or sensitive personal information to it. The application sends the user's career profile to the configured embedding and chat providers when online mode is enabled.
 
