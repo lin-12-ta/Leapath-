@@ -1,0 +1,17 @@
+backend/.venv/
+backend/.env
+backend/*.db
+backend/__pycache__/
+backend/.pytest_cache/
+backend/app/__pycache__/
+backend/tests/__pycache__/
+frontend/node_modules/
+frontend/.npm-cache/
+frontend/dist/
+
+backend/data/career_embeddings.json
+backend/data/career_embeddings.tmp
+backend/venv/
+**/__pycache__/
+*.py[cod]
+frontend/*.tsbuildinfo
